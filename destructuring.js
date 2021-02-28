@@ -23,7 +23,7 @@ var carDetails = {
 
 //Code Here
 
-
+const { color, make, model, year } = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -33,9 +33,19 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
-  
+
+  let {
+    firstName: firstName,
+    lastName: lastName,
+    title: title,
+  } = obj
+
+
+  // let copy = Object.assign({}, obj)
+  // return `Hello, ${title} ${firstName} ${lastName} !`
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,20 +65,52 @@ function greeting( obj ) {
 
 //Code Here
 
+let usStates = {
+  utah: Number,
+  california: Number,
+  texas: Number,
+  arizona: Number
+}
 
+function totalPopulation(usStates) {
+  for (let i = 0; i > usStates.length; i++) {
+
+  }
+  states = []
+  return states.push(usStates[i])
+};
 
 ////////// PROBLEM 4 //////////
 
 /*
-  Write a function called ingredients that will take in an object. 
-  This object will have 3 properties named carb, fat, and protein. 
-  The property values will be strings. 
-  Use object destructuring to save the property values to new variables. 
-  Push these new variables to an array and return the array. 
+  Write a function called ingredients that will take in an object.
+  This object will have 3 properties named carb, fat, and protein.
+  The property values will be strings.
+  Use object destructuring to save the property values to new variables.
+  Push these new variables to an array and return the array.
 */
 
 //Code Here
+healthWatcher = {
+  carb: '',
+  fat: '',
+  protein: ''
+}
+healthW = []
 
+function ingredients(healthWatcher) {
+  for (let i = 0; i < healthWatcher.length; i++) {
+    let i = healthWatcher[i];
+  }
+
+  let {
+    carb: carb,
+    fat: fat,
+    protein: protein
+  } = healthWatcher
+  healthW = []
+  return healthW.push(healthWatcher[i])
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -87,7 +129,9 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function largeNumbers([first, second, third]) {
+  return Math.min[first, second, third]
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -99,4 +143,14 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function numberGroups([a, b, c]) {
+  if (a > (b && c)) {
+    return a
+  }
+  else if (b > (a && c)) {
+    return b
+  }
+  else if (c > (a && b)) {
+    return c
+  }
+}
